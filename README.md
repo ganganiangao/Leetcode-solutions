@@ -1,6 +1,5 @@
 # LeetCode Solutions by ganganiangao
 
-# LeetCode Solutions by ganganiangao
 
 | 題號 | 題目名稱                  | 程式碼                              | 詳解                              |
 |------|---------------------------|-------------------------------------|-----------------------------------|
