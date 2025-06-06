@@ -2,4 +2,4 @@
 
 | 題號 | 題目名稱             | 說明 |
 |------|----------------------|------|
-| 001  | Two Sum              | [two_sum.cpp](two_sum.cpp) |
+| 001  | Two Sum              | [001_two_sum.cpp](001_two_sum.cpp) |
