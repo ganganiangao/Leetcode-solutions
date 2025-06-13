@@ -1,3 +1,7 @@
+using namespace std;
+#include <iostream>
+#include <vector>
+
 class Solution {
 public:
     vector<int> val;
@@ -15,3 +19,9 @@ public:
         return val[n] = climbStairs(n-1) + climbStairs(n-2);        
     }
 };
+
+int main(){
+    Solution s;
+    int n; cin >> n;
+    cout << s.climbStairs(n) << endl;
+}
