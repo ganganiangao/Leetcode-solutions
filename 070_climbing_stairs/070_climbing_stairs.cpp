@@ -25,3 +25,4 @@ int main(){
     int n; cin >> n;
     cout << s.climbStairs(n) << endl;
 }
+
