@@ -3,7 +3,7 @@ using namespace std;
 #include <vector>
 class Solution {
 public:
-    int minCostClimbingStairs(vector<int>& cost) {
+    int rob(vector<int>& nums) {
         
     }
 };
@@ -11,5 +11,5 @@ public:
 int main(){
     Solution s;
     int n; cin >> n;
-    cout << s.tribonacci(n) << endl;
+    // cout << s.tribonacci(n) << endl;
 }
