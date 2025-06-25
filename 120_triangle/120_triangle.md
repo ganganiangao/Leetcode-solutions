@@ -1,6 +1,7 @@
 # 120_triangle
 
-## top down solution space complexity O(`M^2`)
+## top down solution 
+Memory complexity O(`M^2`)
 ```cpp
 using namespace std;
 #include <iostream>
@@ -43,7 +44,7 @@ public:
 ```
 
 ## bottom up solution 
-memory complexity O(`M`)
+Memory complexity O(`M`)
 ```cpp
 using namespace std;
 #include <iostream>
