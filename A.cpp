@@ -1,79 +1,73 @@
 using namespace std;
 #include <iostream>
 #include <vector>
+using namespace std;
+#include <iostream>
+#include <vector>
 class Solution {
 public:
-    int minFallingPathSum(vector<vector<int>>& matrix) {
-        int n = matrix.size();
-        vector<int> dp = matrix[n-1]; // 從最後一層開始
+    int maximalSquare(vector<vector<char>>& matrix) {
+        int m = matrix.size();
+        int n = matrix[0].size();
+        short ans = 0;
+        bool fnd = false;
 
-        for(int i=n-2;i>=0;--i){
-            for(int j=0;j<n;j++){
-                int min_ = dp[j];
-
-                if(j!=0){
-                    min_ = min(dp[j-1], min_);
-                }
-                if(j!= n-1){
-                    min_ = min(min_, dp[j+1]);
-                }
-
-                dp[j] = matrix[i][j] + min_;
+        vector<short> dp(n);
+        for(int j=0;j<n;j++){
+            dp[j] = matrix[0][j] - '0';
+            if(dp[j]) {
+                fnd = true;cout << "true";
             }
         }
 
-        int ans = dp[0];
-        for(int i=0;i<n;i++) ans = min(ans, dp[i]);
+        if(m==1 && fnd) return 1;
         
-        return ans;
+        for(int i=1;i<m;i++){
+            vector<short> new_dp(n, 0);
+            if(matrix[i][0] == '1') {
+                new_dp[0] = 1;
+                fnd = true;
+            }
+            else new_dp[0] = 0;
+            
+            for(int j=1;j<n;j++){
+                if(matrix[i][j] == '0'){
+                    new_dp[j] = 0;
+                    continue;
+                }
+                else{
+                    fnd = true;
+                    short mindp = min(min(dp[j], dp[j-1]) , new_dp[j-1]);
+                    new_dp[j] = mindp +1;
+                    ans = max(ans, new_dp[j]);
+                }
+            }
+            for(auto i:new_dp) cout << i << " ";
+            cout << "\tans="<<ans<< endl;
+            dp = new_dp;
+        }
+
+        
+        int area = ((int)ans)*((int)ans);
+        if(fnd) area = max(1, area);
+        return area;
     }
 };
 
 int main(){
     Solution s;
-    vector<vector<int>> matrix = 
-    {{100,-42,-46,-41},
-    {31,97,10,-10},
-    {-58,-51,82,89},
-    {51,81,69,-51}};
+    // vector<vector<char>> matrix = 
+    // {{'1','0','1','0','0'},
+    //  {'1','0','1','1','1'},
+    //  {'1','1','1','1','1'},
+    //  {'1','0','0','1','0'}};
+    vector<vector<char>> matrix = 
+    {{'1','0'},
+     {'0','0'}};
+    // vector<vector<char>> matrix = 
+    // {{'1'}};
     // vector<vector<int>> matrix = {{2,1,3},{6,5,4},{7,8,9}};
 
-    int n = matrix.size();
-    vector<int> dp = matrix[0]; // 從第一層開始
-    for(int j=0;j<n;j++){
-            cout << dp[j] << " ";
-    }cout << endl;
-    for(int i=1;i<n;i++){
-        for(int j=0;j<n;j++){
-            
-            int min_ = dp[j];
-
-            if(j!=0){
-                min_ = min(dp[j-1], min_);
-                
-            }
-            if(j!= n-1){
-                min_ = min(min_, dp[j+1]);
-            }
-            if(min_==dp[j]) cout <<"\\ ";
-            if(min_==dp[j-1]) cout <<"/ ";
-            
-            if(min_==dp[j+1]) cout <<"/ ";
-            dp[j] = min_ + matrix[i][j];
-            cout << dp[j] << " ";
-        }
-        cout << endl;
-    }
-
-
-
-    int ans = dp[0];
-    for(int i=0;i<n;i++) {
-        ans = min(ans, dp[i]);
-        cout << dp[i] << " ";
-    }
-    cout << endl;
-    cout << ans << endl;
-
+    cout << s.maximalSquare(matrix) << endl;
 
 }
