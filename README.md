@@ -28,7 +28,8 @@
 
 ## 📝 筆記區
 
-### 🔹 DP — Fibonacci Style `(#dp--fibonacci-style)`
+<h3 id="dp-fibonacci-style">🔹 DP — Fibonacci Style</h3>
+
 
 ```md
 - 題型特徵：
