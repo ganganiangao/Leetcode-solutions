@@ -2,7 +2,12 @@
 
 ## 🧠 LeetCode Study Plan 筆記區
 
-本筆記區整理三大類演算法主題：Dynamic Programming, Graph Theory, Binary Search。每類主題依據常見題型 (Pattern) 分區，並可補充對應解題技巧與練習進度。
+本筆記區整理三大類演算法主題：
+* Dynamic Programming
+* Graph Theory
+* Binary Search
+
+每類主題依據常見題型 (Pattern) 分區，補充對應解題技巧與練習進度。
 
 ---
 
@@ -10,11 +15,11 @@
 
 | Pattern                | 代表題目                                                        | 筆記區 Link                     |
 | ---------------------- | ----------------------------------------------------------- | ---------------------------- |
-| 🧮 Fibonacci Style     | \[70. Climbing Stairs], \[198. House Robber]                | [點我前往](#dp--fibonacci-style) |
-| 📐 2D DP / Matrix      | \[64. Minimum Path Sum], \[221. Maximal Square]             | [點我前往](#dp--2d-matrix)       |
-| 🔤 On Strings          | \[516. Longest Palindromic Subsequence], \[139. Word Break] | [點我前往](#dp--on-strings)      |
-| 📊 Subsequence Related | \[300. LIS], \[1143. LCS]                                   | [點我前往](#dp--subsequence)     |
-| 📦 Knapsack Style      | \[0/1 Knapsack], \[Subset Sum]                              | [點我前往](#dp--knapsack)        |
+|  Fibonacci Style     | \[70. Climbing Stairs], \[198. House Robber]                | [點我前往](#dp--fibonacci-style) |
+|  2D DP / Matrix      | \[64. Minimum Path Sum], \[221. Maximal Square]             | [點我前往](#dp--2d-matrix)       |
+|  On Strings          | \[516. Longest Palindromic Subsequence], \[139. Word Break] | [點我前往](#dp--on-strings)      |
+|  Subsequence Related | \[300. LIS], \[1143. LCS]                                   | [點我前往](#dp--subsequence)     |
+|  Knapsack Style      | \[0/1 Knapsack], \[Subset Sum]                              | [點我前往](#dp--knapsack)        |
 
 ---
 
